@@ -1,0 +1,104 @@
+/* QuestionAndAnswer.css */
+
+/* אפס עיצובים בסיסיים ומרכז את כל התוכן בעמוד */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: rgb(249, 248, 251);
+}
+
+/* עיצוב הכותרת */
+.page-title {
+    color:  rgb(50, 10, 250);
+    text-align: center;
+    font-size: 3em;
+    margin: 20px 0; /* רווח למעלה ולמטה */
+    text-shadow: 
+        2px 2px 0 #fff,  
+        -2px -2px 0 #fff,
+        2px -2px 0 #fff,
+        -2px 2px 0 #fff; 
+}
+
+/* עיצוב מיכל הנושאים */
+.topics-container {
+    margin-top: 20px; /* רווח מעל למיכל הנושאים */
+    gap: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* עיצוב הכפתורים */
+.button {
+    padding: 20px 35px;
+    border: 3px solid rgb(50, 10, 250);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+/* עיצוב הכפתור הנבחר */
+.current-topic .button {
+    background-color: #e0e0e0;
+    border-color: #999;
+}
+
+/* עיצוב מיכל הטבלה */
+.table-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* עיצוב הטבלה */
+.qa-table {
+    max-width: 800px;
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid rgb(50, 10, 250);
+}
+
+.qa-table th,
+.qa-table td {
+    
+    border: 1px solid rgb(50, 10, 250);
+    padding: 10px;
+    text-align: left;
+}
+
+.question-row {
+    cursor: pointer;
+    background-color: #f9f9f9;
+}
+
+/* עיצוב החיצים */
+.arrow {
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.arrow.open {
+    transform: rotate(180deg);
+}
+
+.answer-row {
+    display: none;
+    background-color:rgb(50, 10, 250);
+}
+
+.answer-row.show {
+    display: table-row;
+}
+
+.answer {
+    padding: 10px;
+    background-color: #ffffff;
+}
